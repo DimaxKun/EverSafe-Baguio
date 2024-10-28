@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeSection"
+        android:title="Home"
+        android:icon="@drawable/baseline_home_filled_24"/>
+
+    <item
+        android:id="@+id/warningSection"
+        android:title="Warning"
+        android:icon="@drawable/baseline_warning_24"/>
+
+    <item
+        android:id="@+id/locationSection"
+        android:title="Location"
+        android:icon="@drawable/baseline_location_pin_24"/>
+
+    <item
+        android:id="@+id/tipsSection"
+        android:title="Tips"
+        android:icon="@drawable/baseline_lightbulb_24"/>
+
+    <item
+        android:id="@+id/notifSection"
+        android:title="Notifications"
+        android:icon="@drawable/baseline_notifications_24"/>
+</menu>
