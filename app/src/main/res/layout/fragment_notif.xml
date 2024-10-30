@@ -1,18 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/green"
-    tools:context=".NotifFragment">
+    android:background="#FFE5CC"
+    tools:context=".MainActivity">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Notification Page"
-        android:textSize="50dp"
-        android:textColor="@color/white"
-        android:gravity="center"/>
+    <!-- Top bar with icon and title -->
+    <LinearLayout
+        android:id="@+id/top_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#FFA500"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:padding="16dp">
 
-</FrameLayout>
+        <ImageView
+            android:id="@+id/icon_left"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@drawable/applogo_size"
+            android:scaleType="centerCrop"
+            android:src="@drawable/applogo"
+            android:clipToOutline="true"
+            android:contentDescription="Left Icon" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="EverSafe Baguio"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/icon_right"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@drawable/round_image_corner"
+            android:clipToOutline="true"
+            android:src="@drawable/avatar_icon"
+            android:contentDescription="Right Icon" />
+    </LinearLayout>
+
+    <!-- Disaster Alerts Card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_disaster_alerts"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/top_bar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:cardElevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/image_disaster_alerts"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:scaleType="fitXY"
+                    android:background="@drawable/border_image"
+                    android:src="@drawable/earthquake_houses" />
+
+                <TextView
+                    android:id="@+id/text_disaster_alerts"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#40000000"
+                    android:gravity="center"
+                    android:text="NOTIFICATIONS"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+            </FrameLayout>
+            </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

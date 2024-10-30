@@ -31,29 +31,29 @@
                 android:layout_height="wrap_content"
                 android:text="Sign Up"
                 android:id="@+id/signup"
-                android:textSize="36dp"
+                android:textSize="33dp"
+                android:layout_marginTop="-10dp"
                 android:textAlignment="center"
                 android:textStyle="bold"
                 android:textColor="@color/orange"/>
 
+
             <EditText
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
                 android:id="@+id/username"
-                android:hint="Username"
-                android:textSize="17dp"
-                android:inputType="text"
-                android:background="@drawable/rounded_corner"
-                android:padding="10dp"
-                android:drawableLeft="@drawable/baseline_person_24"
-                android:drawablePadding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
                 android:layout_marginTop="40dp"
-                />
-
+                android:background="@drawable/rounded_corner"
+                android:drawableLeft="@drawable/baseline_person_2_24"
+                android:drawablePadding="10dp"
+                android:hint="Username"
+                android:inputType="text"
+                android:padding="10dp"
+                android:textSize="17dp" />
 
             <EditText
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="45dp"
                 android:id="@+id/password"
                 android:hint="Password"
                 android:textSize="17dp"
@@ -66,7 +66,7 @@
 
             <EditText
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="45dp"
                 android:id="@+id/email"
                 android:hint="Email"
                 android:textSize="17dp"
@@ -80,10 +80,10 @@
 
             <Button
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="55dp"
                 android:id="@+id/signupButton"
                 android:text="Sign Up"
-                android:textSize="20dp"
+                android:textSize="19dp"
                 android:layout_marginTop="30dp"
                 android:backgroundTint="@color/lightorange"/>
 
@@ -98,7 +98,7 @@
         android:padding="8dp"
         android:text="Already have an account?\nLogin Now"
         android:textAlignment="center"
-        android:textSize="17dp"
+        android:textSize="15dp"
         />
 
 

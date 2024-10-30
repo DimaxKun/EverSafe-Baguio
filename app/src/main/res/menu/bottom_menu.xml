@@ -17,8 +17,8 @@
 
     <item
         android:id="@+id/tipsSection"
-        android:title="Tips"
-        android:icon="@drawable/baseline_lightbulb_24"/>
+        android:title="AI Help"
+        android:icon="@drawable/baseline_chat_24"/>
 
     <item
         android:id="@+id/notifSection"
