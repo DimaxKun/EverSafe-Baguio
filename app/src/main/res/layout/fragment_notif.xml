@@ -8,7 +8,6 @@
     android:background="#FFE5CC"
     tools:context=".MainActivity">
 
-    <!-- Top bar with icon and title -->
     <LinearLayout
         android:id="@+id/top_bar"
         android:layout_width="0dp"
@@ -51,7 +50,6 @@
             android:contentDescription="Right Icon" />
     </LinearLayout>
 
-    <!-- Disaster Alerts Card -->
     <androidx.cardview.widget.CardView
         android:id="@+id/card_disaster_alerts"
         android:layout_width="0dp"
@@ -90,6 +88,141 @@
                     android:textSize="28sp"
                     android:textStyle="bold" />
             </FrameLayout>
-            </LinearLayout>
+        </LinearLayout>
     </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/card_disaster_alerts"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:padding="16dp"
+        android:background="#FFE5CC">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recent"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:layout_marginBottom="10dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/lightyellow_blackborders"
+            android:padding="16dp"
+            android:layout_marginBottom="8dp">
+
+            <ImageView
+                android:id="@+id/iconFloodWarning"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:src="@drawable/baseline_flood_24" />
+
+            <TextView
+                android:id="@+id/titleFloodWarning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Flood Warning in Barangay"
+                android:textColor="#FF9300"
+                android:textStyle="bold"
+                android:layout_toEndOf="@id/iconFloodWarning"
+                android:layout_marginStart="8dp"
+                android:textSize="17sp" />
+
+            <ImageView
+                android:id="@+id/deleteFloodWarning"
+                android:layout_width="21dp"
+                android:layout_height="21dp"
+                android:src="@drawable/baseline_menu_24_1"
+                android:layout_alignParentEnd="true"
+                android:contentDescription="Delete Notification" />
+
+            <TextView
+                android:id="@+id/messageFloodWarning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Heavy rains are expected to continue. Stay alert."
+                android:layout_below="@id/titleFloodWarning"
+                android:layout_toEndOf="@id/iconFloodWarning"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="8dp"
+                android:textSize="14sp"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/markAsReadFlood"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mark as Read"
+                android:textColor="#007FFF"
+                android:layout_below="@id/messageFloodWarning"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="4dp"
+                android:textSize="14sp"
+                android:gravity="center"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/lightyellow_blackborders"
+            android:padding="16dp"
+            android:layout_marginBottom="8dp">
+
+            <ImageView
+                android:id="@+id/iconEvacuationOrder"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/baseline_directions_run_24" />
+
+            <TextView
+                android:id="@+id/titleEvacuationOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Evacuation Order"
+                android:textColor="#FF9300"
+                android:textStyle="bold"
+                android:layout_toEndOf="@id/iconEvacuationOrder"
+                android:layout_marginStart="8dp"
+                android:textSize="17sp" />
+
+            <ImageView
+                android:id="@+id/deleteEvacuationOrder"
+                android:layout_width="21dp"
+                android:layout_height="21dp"
+                android:layout_alignParentEnd="true"
+                android:contentDescription="Delete Notification"
+                android:src="@drawable/baseline_menu_24_1" />
+
+            <TextView
+                android:id="@+id/messageEvacuationOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Evacuation order in effect for Residents are..."
+                android:layout_below="@id/titleEvacuationOrder"
+                android:layout_toEndOf="@id/iconEvacuationOrder"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="8dp"
+                android:textSize="14sp"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/markAsReadEvacuation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mark as Read"
+                android:textColor="#007FFF"
+                android:layout_below="@id/messageEvacuationOrder"
+                android:layout_marginTop="4dp"
+                android:textSize="14sp"
+                android:gravity="center"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

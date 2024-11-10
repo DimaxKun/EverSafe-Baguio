@@ -11,7 +11,6 @@
     android:background="@drawable/fire_fighters_2"
     tools:context=".Login">
 
-
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -36,7 +35,6 @@
                 android:textAlignment="center"
                 android:textStyle="bold"
                 android:textColor="@color/orange"/>
-
 
             <EditText
                 android:id="@+id/username"
@@ -64,19 +62,19 @@
                 android:inputType="textPassword"
                 android:layout_marginTop="20dp"/>
 
+
             <EditText
+                android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
-                android:id="@+id/email"
-                android:hint="Email"
-                android:textSize="17dp"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/rounded_corner"
-                android:padding="10dp"
                 android:drawableLeft="@drawable/baseline_email_24"
                 android:drawablePadding="10dp"
+                android:hint="Email"
                 android:inputType="textEmailAddress"
-                android:layout_marginTop="20dp"/>
-
+                android:padding="10dp"
+                android:textSize="17dp" />
 
             <Button
                 android:layout_width="match_parent"
@@ -87,11 +85,8 @@
                 android:layout_marginTop="30dp"
                 android:backgroundTint="@color/lightorange"/>
 
-
         </LinearLayout>
-
     </androidx.cardview.widget.CardView>
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -100,6 +95,4 @@
         android:textAlignment="center"
         android:textSize="15dp"
         />
-
-
 </LinearLayout>

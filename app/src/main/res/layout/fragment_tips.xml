@@ -8,7 +8,6 @@
     android:background="#FFE5CC"
     tools:context=".MainActivity">
 
-    <!-- Top bar with icon and title -->
     <LinearLayout
         android:id="@+id/top_bar"
         android:layout_width="0dp"
@@ -83,7 +82,7 @@
                     android:layout_height="match_parent"
                     android:background="#40000000"
                     android:gravity="center"
-                    android:text="EVACUATION ROUTES"
+                    android:text="SAFETY TIPS"
                     android:textAlignment="center"
                     android:textColor="#FFFFFF"
                     android:textSize="28sp"
@@ -93,7 +92,6 @@
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
-    <!-- Integrated Tips Layout -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -104,7 +102,6 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent">
 
-        <!-- Section 1: Tips for Ongoing Disaster -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -118,7 +115,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:background="@drawable/lightblue_blackborders"
-                android:padding="16dp">
+                android:padding="10dp">
 
                 <ImageView
                     android:layout_width="25dp"
@@ -136,7 +133,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Tips for Ongoing Disaster"
+                        android:text="CDRRMO-Baguio Tips for Disasters"
                         android:textColor="#000000"
                         android:textStyle="bold"
                         android:textSize="18sp"/>
@@ -144,7 +141,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="In Case of Landslide Risk:"
+                        android:text="What To Do During Typhoon:"
                         android:textColor="#000000"
                         android:textStyle="bold"
                         android:textSize="16sp"
@@ -153,7 +150,25 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="• Avoid steep and unstable areas.\n• Stay away from the edges of slopes and cliffs.\n• Secure your home’s foundation and evacuate if advised."
+                        android:text="• Keep away from windows and doors.\n• If flooding is imminent, switch off the main power.\n• Follow the local government’s evacuation orders."
+                        android:textColor="#000000"
+                        android:textSize="14sp"
+                        android:layout_marginTop="4dp"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="What To Do During Landslide:"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:layout_marginTop="14dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="• Notice signs of a landslide, evacuate to safe area.\n• Unusual rumbling or cracking sounds can indicate an imminent landslide.\n• Move to higher ground as landslides can cause debris to flow rapidly into valleys and rivers."
                         android:textColor="#000000"
                         android:textSize="14sp"
                         android:layout_marginTop="4dp"/>
@@ -161,7 +176,6 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- Section 2: General Disaster Preparedness Tips -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -175,7 +189,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:background="@drawable/lightgreen_blackborders"
-                android:padding="16dp">
+                android:padding="10dp">
 
                 <ImageView
                     android:layout_width="25dp"
@@ -210,7 +224,6 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- Section 3: Emergency Contacts -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -223,7 +236,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:background="@drawable/lightred_blackborders"
-                android:padding="16dp">
+                android:padding="10dp">
 
                 <ImageView
                     android:layout_width="25dp"
@@ -249,27 +262,12 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="• NDRRMC: Landline: (02) 8911-5061\n• BFP: Landline: (02) 724-3450"
+                        android:text="• CDRRMO Hotline: 911 or 09996784335\n• BFP Hotline:  911 or 09124096114\n• Red Cross Hotline: 143 or (02) 8527-0000"
                         android:textColor="#000000"
                         android:textSize="14sp"
                         android:layout_marginTop="8dp"/>
                 </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
-
-        <!-- Chat Button -->
-        <ImageButton
-            android:id="@+id/btn_chat"
-            android:layout_width="58dp"
-            android:layout_height="53dp"
-            android:layout_gravity="end"
-            android:layout_marginTop="16dp"
-            android:src="@drawable/ai_chatbot"
-            android:scaleType="fitXY"
-            android:clipToOutline="true"
-            android:background="@drawable/chat_background"
-            android:contentDescription="Chat with AI"
-            android:elevation="4dp"
-            android:layout_marginBottom="16dp"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

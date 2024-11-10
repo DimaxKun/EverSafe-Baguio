@@ -12,13 +12,13 @@
 
     <item
         android:id="@+id/locationSection"
-        android:title="Location"
+        android:title="Evacuation"
         android:icon="@drawable/baseline_location_pin_24"/>
 
     <item
         android:id="@+id/tipsSection"
-        android:title="AI Help"
-        android:icon="@drawable/baseline_chat_24"/>
+        android:title="Safety Tips"
+        android:icon="@drawable/baseline_lightbulb_24"/>
 
     <item
         android:id="@+id/notifSection"

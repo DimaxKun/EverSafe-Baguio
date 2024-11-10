@@ -42,13 +42,9 @@ public class MainActivity extends AppCompatActivity {
         signupButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                if(username.getText().toString().equals("user") && password.getText().toString().equals("1234")){
                     Toast.makeText(MainActivity.this, "Sign Up Successful", Toast.LENGTH_SHORT).show();
                     Intent gotoHome = new Intent(MainActivity.this, Home.class);
                     startActivity(gotoHome);
-//                } else{
-//                    Toast.makeText(MainActivity.this, "Sign Up Failed", Toast.LENGTH_SHORT).show();
-//                }
 
             }
         });

@@ -29,7 +29,6 @@ public class Home extends AppCompatActivity {
         replaceFragment(new DashboardFragment());
         binding.bottomnNav.setBackground(null);
 
-        // Use setOnItemSelectedListener instead of setOnItemReselectedListener
         binding.bottomnNav.setOnItemSelectedListener(item -> {
             if (item.getItemId() == R.id.homeSection) {
                 replaceFragment(new DashboardFragment());
@@ -42,7 +41,7 @@ public class Home extends AppCompatActivity {
             } else if (item.getItemId() == R.id.notifSection) {
                 replaceFragment(new NotifFragment());
             }
-            return true; // Return true to indicate the event was handled
+            return true;
         });
     }
 

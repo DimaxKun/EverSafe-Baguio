@@ -23,7 +23,6 @@ public class CallActivity extends AppCompatActivity {
 
         startCallTimer();
 
-        // End call when button is clicked
         endCallButton.setOnClickListener(v -> {
             isCalling = false;
             finish();

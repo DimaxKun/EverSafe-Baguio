@@ -8,7 +8,6 @@
     android:background="#FFE5CC"
     tools:context=".MainActivity">
 
-    <!-- Top bar with icon and title -->
     <LinearLayout
         android:id="@+id/top_bar"
         android:layout_width="0dp"
@@ -51,7 +50,6 @@
             android:contentDescription="Right Icon" />
     </LinearLayout>
 
-    <!-- Disaster Alerts Card -->
     <androidx.cardview.widget.CardView
         android:id="@+id/card_disaster_alerts"
         android:layout_width="0dp"
@@ -69,7 +67,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/image_disaster_alerts"
                 android:layout_width="match_parent"
                 android:layout_height="140dp"
@@ -91,7 +89,6 @@
         </FrameLayout>
     </androidx.cardview.widget.CardView>
 
-    <!-- Evacuation Routes Card -->
     <androidx.cardview.widget.CardView
         android:id="@+id/card_evacuation_routes"
         android:layout_width="0dp"
@@ -109,7 +106,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/image_evacuation_routes"
                 android:layout_width="match_parent"
                 android:layout_height="140dp"
@@ -117,21 +114,37 @@
                 android:background="@drawable/border_image"
                 android:src="@drawable/evacuationcenter" />
 
-            <TextView
-                android:id="@+id/text_evacuation_routes"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:orientation="vertical"
                 android:gravity="center"
-                android:text="EVACUATION ROUTES"
-                android:textColor="#FFFFFF"
-                android:textSize="23sp"
-                android:textStyle="bold"
-                android:background="#40000000"
-                android:textAlignment="center" />
+                android:background="#40000000">
+
+                <TextView
+                    android:id="@+id/text_evacuation_routes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="EVACUATION ROUTES"
+                    android:textColor="#FFFFFF"
+                    android:textSize="23sp"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/text_ai_powered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="AI powered"
+                    android:textColor="#FFFFFF"
+                    android:textAlignment="center"
+                    android:textSize="17sp" />
+            </LinearLayout>
         </FrameLayout>
     </androidx.cardview.widget.CardView>
 
-    <!-- Safety Tips Card -->
     <androidx.cardview.widget.CardView
         android:id="@+id/card_safety_tips"
         android:layout_width="0dp"
@@ -149,7 +162,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/image_safety_tips"
                 android:layout_width="match_parent"
                 android:layout_height="140dp"
@@ -174,22 +187,11 @@
                     android:textSize="23sp"
                     android:textAlignment="center"
                     android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/text_ai_powered"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="AI powered"
-                    android:textColor="#FFFFFF"
-                    android:textAlignment="center"
-                    android:textSize="17sp" />
             </LinearLayout>
 
         </FrameLayout>
     </androidx.cardview.widget.CardView>
 
-    <!-- Donate Card -->
     <androidx.cardview.widget.CardView
         android:id="@+id/card_donate"
         android:layout_width="0dp"
@@ -208,7 +210,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/image_donate"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
@@ -220,14 +222,13 @@
                 android:id="@+id/text_donate"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="#40000000"
                 android:gravity="center"
                 android:text="DONATE"
+                android:textAlignment="center"
                 android:textColor="#FFFFFF"
                 android:textSize="23sp"
-                android:textStyle="bold"
-                android:background="#40000000"
-                android:textAlignment="center" />
+                android:textStyle="bold" />
         </FrameLayout>
     </androidx.cardview.widget.CardView>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
