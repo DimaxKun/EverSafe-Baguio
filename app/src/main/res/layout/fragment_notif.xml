@@ -11,7 +11,7 @@
     <LinearLayout
         android:id="@+id/top_bar"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:orientation="horizontal"
         android:background="#FFA500"
         app:layout_constraintTop_toTopOf="parent"
@@ -21,8 +21,8 @@
 
         <ImageView
             android:id="@+id/icon_left"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:background="@drawable/applogo_size"
             android:scaleType="centerCrop"
             android:src="@drawable/applogo"
@@ -42,8 +42,8 @@
 
         <ImageView
             android:id="@+id/icon_right"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:background="@drawable/round_image_corner"
             android:clipToOutline="true"
             android:src="@drawable/avatar_icon"
@@ -71,7 +71,7 @@
                 <ImageView
                     android:id="@+id/image_disaster_alerts"
                     android:layout_width="match_parent"
-                    android:layout_height="180dp"
+                    android:layout_height="130dp"
                     android:scaleType="fitXY"
                     android:background="@drawable/border_image"
                     android:src="@drawable/earthquake_houses" />
@@ -80,7 +80,7 @@
                     android:id="@+id/text_disaster_alerts"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#40000000"
+                    android:background="#30000000"
                     android:gravity="center"
                     android:text="NOTIFICATIONS"
                     android:textAlignment="center"
@@ -107,13 +107,14 @@
             android:text="Recent"
             android:textStyle="bold"
             android:textSize="15dp"
+            android:textColor="@color/black"
             android:layout_marginBottom="10dp"/>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/lightyellow_blackborders"
-            android:padding="16dp"
+            android:padding="3dp"
             android:layout_marginBottom="8dp">
 
             <ImageView
@@ -145,7 +146,7 @@
                 android:id="@+id/messageFloodWarning"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Heavy rains are expected to continue. Stay alert."
+                android:text="Heavy rains are expected to continue..."
                 android:layout_below="@id/titleFloodWarning"
                 android:layout_toEndOf="@id/iconFloodWarning"
                 android:layout_marginTop="4dp"
@@ -170,7 +171,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/lightyellow_blackborders"
-            android:padding="16dp"
+            android:padding="3dp"
             android:layout_marginBottom="8dp">
 
             <ImageView

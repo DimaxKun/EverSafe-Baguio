@@ -17,7 +17,7 @@
 
     <item
         android:id="@+id/tipsSection"
-        android:title="Safety Tips"
+        android:title="Tips"
         android:icon="@drawable/baseline_lightbulb_24"/>
 
     <item

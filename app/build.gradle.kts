@@ -37,7 +37,10 @@ android {
 }
 
 dependencies {
-
+    implementation (libs.gson)
+    implementation(libs.okhttp)
+    implementation (libs.retrofit)
+    implementation (libs.converter.gson)
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
@@ -47,6 +50,8 @@ dependencies {
     androidTestImplementation(libs.espresso.core)
     implementation(libs.constraintlayout)
     implementation (libs.recyclerview)
-
-
+    implementation(libs.volley)
+    implementation(libs.play.services.maps)
+    implementation (libs.navigation.fragment.ktx)
+    implementation (libs.navigation.ui.ktx)
 }

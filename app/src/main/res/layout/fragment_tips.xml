@@ -11,7 +11,7 @@
     <LinearLayout
         android:id="@+id/top_bar"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:orientation="horizontal"
         android:background="#FFA500"
         app:layout_constraintTop_toTopOf="parent"
@@ -21,8 +21,8 @@
 
         <ImageView
             android:id="@+id/icon_left"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:background="@drawable/applogo_size"
             android:scaleType="centerCrop"
             android:src="@drawable/applogo"
@@ -42,8 +42,8 @@
 
         <ImageView
             android:id="@+id/icon_right"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:background="@drawable/round_image_corner"
             android:clipToOutline="true"
             android:src="@drawable/avatar_icon"
@@ -71,7 +71,7 @@
                 <ImageView
                     android:id="@+id/image_disaster_alerts"
                     android:layout_width="match_parent"
-                    android:layout_height="180dp"
+                    android:layout_height="130dp"
                     android:scaleType="fitXY"
                     android:background="@drawable/border_image"
                     android:src="@drawable/handsonhead" />
@@ -80,7 +80,7 @@
                     android:id="@+id/text_disaster_alerts"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#40000000"
+                    android:background="#30000000"
                     android:gravity="center"
                     android:text="SAFETY TIPS"
                     android:textAlignment="center"
@@ -92,182 +92,205 @@
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
-    <LinearLayout
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="12dp"
-        android:background="#FFE5CC"
+        android:layout_height="0dp"
+        android:fillViewport="true"
         app:layout_constraintTop_toBottomOf="@id/card_disaster_alerts"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent">
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
 
-        <androidx.cardview.widget.CardView
+        <LinearLayout
+            android:id="@+id/safety_tips_desc"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            app:cardElevation="4dp"
-            app:cardCornerRadius="8dp"
-            android:background="#FFDAB9">
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="12dp"
+            android:background="#FFE5CC">
 
-            <LinearLayout
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:background="@drawable/lightblue_blackborders"
-                android:padding="10dp">
-
-                <ImageView
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:src="@drawable/baseline_lightbulb_24"
-                    android:contentDescription="Landslide Icon"
-                    android:layout_marginEnd="8dp"/>
+                android:layout_marginBottom="8dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="8dp"
+                android:background="#FFDAB9">
 
                 <LinearLayout
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:orientation="horizontal"
+                    android:background="@drawable/lightblue_blackborders"
+                    android:padding="10dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/baseline_lightbulb_24"
+                        android:contentDescription="Landslide Icon"
+                        android:layout_marginEnd="8dp"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="CDRRMO-Baguio Tips for Disasters"
-                        android:textColor="#000000"
-                        android:textStyle="bold"
-                        android:textSize="18sp"/>
+                        android:layout_weight="1"
+                        android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="What To Do During Typhoon:"
-                        android:textColor="#000000"
-                        android:textStyle="bold"
-                        android:textSize="16sp"
-                        android:layout_marginTop="8dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="CDRRMO-Baguio Tips for Disasters"
+                            android:textColor="#000000"
+                            android:textStyle="bold"
+                            android:textSize="15sp"/>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="• Keep away from windows and doors.\n• If flooding is imminent, switch off the main power.\n• Follow the local government’s evacuation orders."
-                        android:textColor="#000000"
-                        android:textSize="14sp"
-                        android:layout_marginTop="4dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="What To Do During Typhoon:"
+                            android:textColor="#000000"
+                            android:textStyle="bold"
+                            android:textSize="14sp"
+                            android:layout_marginTop="2dp"/>
 
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="• Keep away from windows and doors.\n• If flooding is imminent, switch off power.\n• Follow local evacuation orders."
+                            android:textColor="#000000"
+                            android:textSize="14sp"
+                            android:layout_marginTop="2dp"/>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="What To Do During Landslide:"
-                        android:textColor="#000000"
-                        android:textStyle="bold"
-                        android:textSize="16sp"
-                        android:layout_marginTop="14dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="What To Do During Landslide:"
+                            android:textColor="#000000"
+                            android:textStyle="bold"
+                            android:textSize="14sp"
+                            android:layout_marginTop="4dp"/>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="• Notice signs of a landslide, evacuate to safe area.\n• Unusual rumbling or cracking sounds can indicate an imminent landslide.\n• Move to higher ground as landslides can cause debris to flow rapidly into valleys and rivers."
-                        android:textColor="#000000"
-                        android:textSize="14sp"
-                        android:layout_marginTop="4dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="• Notice signs of landslide, evacuate quickly.\n• Rumbling sounds indicate a landslide.\n• Move to higher ground for rivers with debris."
+                            android:textColor="#000000"
+                            android:textSize="14sp"
+                            android:layout_marginTop="2dp"/>
+                    </LinearLayout>
                 </LinearLayout>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            app:cardElevation="4dp"
-            app:cardCornerRadius="8dp"
-            android:background="#FFFFE0">
-
-            <LinearLayout
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:background="@drawable/lightgreen_blackborders"
-                android:padding="10dp">
-
-                <ImageView
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:src="@drawable/baseline_directions_run_24"
-                    android:contentDescription="Preparedness Icon"
-                    android:layout_marginEnd="8dp"/>
+                android:layout_marginBottom="8dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="8dp"
+                android:background="#FFFFE0">
 
                 <LinearLayout
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:background="@drawable/lightgreen_blackborders"
+                    android:padding="10dp">
 
-                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/baseline_directions_run_24"
+                        android:contentDescription="Preparedness Icon"
+                        android:layout_marginEnd="8dp"/>
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="General Disaster Preparedness Tips"
-                        android:textColor="#000000"
-                        android:textStyle="bold"
-                        android:textSize="18sp"/>
+                        android:layout_weight="1"
+                        android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="1. Pack an Emergency Kit\n2. Create a Family Emergency Plan\n3. Stay Informed\n4. Secure Your Home\n5. Move to Higher Ground During Floods"
-                        android:textColor="#000000"
-                        android:textSize="14sp"
-                        android:layout_marginTop="8dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="General Disaster Preparedness Tips"
+                            android:textColor="#000000"
+                            android:textStyle="bold"
+                            android:textSize="15sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1. Pack an Emergency Kit\n2. Create a Family Emergency Plan\n3. Stay Informed\n4. Secure Your Home\n5. Move to Higher Ground During Floods"
+                            android:textColor="#000000"
+                            android:textSize="14sp"
+                            android:layout_marginTop="2dp"/>
+                    </LinearLayout>
                 </LinearLayout>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:cardElevation="4dp"
-            app:cardCornerRadius="8dp"
-            android:background="#FFE4B5">
-
-            <LinearLayout
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:background="@drawable/lightred_blackborders"
-                android:padding="10dp">
-
-                <ImageView
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:src="@drawable/baseline_local_phone_24"
-                    android:contentDescription="Contacts Icon"
-                    android:layout_marginEnd="8dp"/>
+                app:cardElevation="4dp"
+                app:cardCornerRadius="8dp"
+                android:background="#FFE4B5">
 
                 <LinearLayout
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:orientation="horizontal"
+                    android:background="@drawable/lightred_blackborders"
+                    android:padding="10dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Emergency Contacts"
-                        android:textColor="#000000"
-                        android:textStyle="bold"
-                        android:textSize="18sp"/>
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/baseline_local_phone_24"
+                        android:contentDescription="Contacts Icon"
+                        android:layout_marginEnd="8dp"/>
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="• CDRRMO Hotline: 911 or 09996784335\n• BFP Hotline:  911 or 09124096114\n• Red Cross Hotline: 143 or (02) 8527-0000"
-                        android:textColor="#000000"
-                        android:textSize="14sp"
-                        android:layout_marginTop="8dp"/>
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Emergency Contacts"
+                            android:textColor="#000000"
+                            android:textStyle="bold"
+                            android:textSize="15sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="• CDRRMO Hotline: 911 or 09996784335\n• BFP Hotline:  911 or 09124096114\n• Red Cross Hotline: 143 or (02) 8527-0000"
+                            android:textColor="#000000"
+                            android:textSize="14sp"
+                            android:layout_marginTop="2dp"/>
+                    </LinearLayout>
                 </LinearLayout>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-    </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Button inside the last CardView -->
+            <Button
+                android:id="@+id/emergencyButton"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:backgroundTint="#FF0000"
+                android:drawableLeft="@drawable/baseline_call_24"
+                android:drawablePadding="8dp"
+                android:padding="10dp"
+                android:text="DIAL 911 Emergency"
+                android:textAllCaps="true"
+                android:textColor="#FFFFFF"
+                android:textSize="14dp"
+                android:layout_gravity="center"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
