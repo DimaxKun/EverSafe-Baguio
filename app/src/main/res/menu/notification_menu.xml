@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_delete"
+        android:title="Delete this notification"
+        android:icon="@drawable/baseline_notifications_none_24" />
+    <item
+        android:id="@+id/action_report"
+        android:title="Report"
+        android:icon="@drawable/baseline_report_24" />
+</menu>

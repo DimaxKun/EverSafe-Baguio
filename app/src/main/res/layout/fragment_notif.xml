@@ -223,7 +223,5 @@
                 android:gravity="center"/>
 
         </RelativeLayout>
-
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

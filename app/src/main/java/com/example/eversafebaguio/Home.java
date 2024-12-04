@@ -1,18 +1,10 @@
 package com.example.eversafebaguio;
 
 import android.os.Bundle;
-
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-
-import android.view.View;
 
 import com.example.eversafebaguio.databinding.ActivityHomeBinding;
 
@@ -26,6 +18,7 @@ public class Home extends AppCompatActivity {
         binding = ActivityHomeBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        // Initial fragment
         replaceFragment(new DashboardFragment());
         binding.bottomnNav.setBackground(null);
 
@@ -39,13 +32,15 @@ public class Home extends AppCompatActivity {
             } else if (item.getItemId() == R.id.tipsSection) {
                 replaceFragment(new TipsFragment());
             } else if (item.getItemId() == R.id.notifSection) {
-                replaceFragment(new NotifFragment());
+                // Replace with NotifFragment and trigger the notification
+                NotifFragment notifFragment = new NotifFragment();
+                replaceFragment(notifFragment);
             }
             return true;
         });
     }
 
-    private void replaceFragment(Fragment fragment){
+    private void replaceFragment(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.frame_layout, fragment);

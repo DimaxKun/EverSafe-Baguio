@@ -267,7 +267,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="• CDRRMO Hotline: 911 or 09996784335\n• BFP Hotline:  911 or 09124096114\n• Red Cross Hotline: 143 or (02) 8527-0000"
+                            android:text="• CDRRMO Hotline: 911 or 0927-628-0498\n• BFP Hotline: 0912-409-6114\n• Emergency Medical Service: 0905-555-1911\n• BCPO: 0917-575-8993 or 0998-598-7739\n• BENECO: 0917-592-1698 or 0908-865-7202"
                             android:textColor="#000000"
                             android:textSize="14sp"
                             android:layout_marginTop="2dp"/>
@@ -280,6 +280,7 @@
                 android:id="@+id/emergencyButton"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
+                android:layout_marginTop="5dp"
                 android:backgroundTint="#FF0000"
                 android:drawableLeft="@drawable/baseline_call_24"
                 android:drawablePadding="8dp"
@@ -290,6 +291,21 @@
                 android:textSize="14dp"
                 android:layout_gravity="center"
                 android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/emergencyButton1"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_height="50dp"
+                android:backgroundTint="#FFE5CC"
+                android:drawablePadding="8dp"
+                android:padding="10dp"
+                android:text="DIAL 911 Emergency"
+                android:textAllCaps="true"
+                android:textColor="#FFE5CC"
+                android:textSize="14dp"
+                android:layout_gravity="center"/>
+
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>

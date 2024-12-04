@@ -54,4 +54,5 @@ dependencies {
     implementation(libs.play.services.maps)
     implementation (libs.navigation.fragment.ktx)
     implementation (libs.navigation.ui.ktx)
+    implementation (libs.core.ktx)
 }

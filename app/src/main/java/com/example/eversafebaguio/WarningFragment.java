@@ -1,8 +1,11 @@
 package com.example.eversafebaguio;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+
+import androidx.activity.OnBackPressedCallback;
 import androidx.fragment.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -11,6 +14,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Retrofit;
@@ -30,6 +35,30 @@ public class WarningFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_warning, container, false);
+
+        // Handle back press for this fragment
+        requireActivity().getOnBackPressedDispatcher().addCallback(
+                getViewLifecycleOwner(),
+                new OnBackPressedCallback(true) {
+                    @Override
+                    public void handleOnBackPressed() {
+                        // Show confirmation dialog
+                        new AlertDialog.Builder(requireContext())
+                                .setMessage("Are you sure you want to exit?")
+                                .setCancelable(false) // Prevent closing dialog when touched outside
+                                .setPositiveButton("Yes", (dialog, id) -> {
+                                    // Exit the app
+                                    requireActivity().finish(); // Close the activity if confirmed
+                                })
+                                .setNegativeButton("No", null) // Do nothing when "No" is clicked
+                                .show();
+                    }
+                });
+
+        ImageView userIcon = view.findViewById(R.id.icon_right);
+        userIcon.setOnClickListener(v ->
+                Toast.makeText(requireContext(), "User Profile", Toast.LENGTH_SHORT).show()
+        );
 
         // Initialize TextViews for weather data and forecast
         weatherConditionTextView = view.findViewById(R.id.weatherConditionTextView);
