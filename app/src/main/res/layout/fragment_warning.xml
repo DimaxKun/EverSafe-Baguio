@@ -74,7 +74,7 @@
                     android:layout_height="130dp"
                     android:scaleType="fitXY"
                     android:background="@drawable/border_image"
-                    android:src="@drawable/disasterimages" />
+                    android:src="@drawable/weather_image3" />
 
                 <TextView
                     android:id="@+id/text_disaster_alerts"
@@ -82,7 +82,7 @@
                     android:layout_height="match_parent"
                     android:background="#30000000"
                     android:gravity="center"
-                    android:text="DISASTER ALERTS"
+                    android:text="WEATHER UDPATE"
                     android:textAlignment="center"
                     android:textColor="#FFFFFF"
                     android:textSize="28sp"
@@ -551,5 +551,17 @@
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/bottom_right_image"
+        android:layout_width="70dp"
+        android:layout_height="185dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="5dp"
+        android:src="@drawable/final_chatbot"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:elevation="10dp"
+        android:contentDescription="Bottom Right Image" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

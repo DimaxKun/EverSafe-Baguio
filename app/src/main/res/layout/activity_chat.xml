@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#333333"
+    tools:context=".ChatAI">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_layout"
+        android:layout_marginBottom="3dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/welcome_text"
+        android:layout_centerInParent="true"
+        android:textColor="@color/white"
+        android:text="Welcome to EverSafe ChatAI\n"
+        android:gravity="center"
+        android:textSize="22dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/welcome_text1"
+        android:layout_centerInParent="true"
+        android:textColor="@color/lightgray"
+        android:text="\nAsk me anything about disaster management, preparedness, or safety tips!"
+        android:layout_below="@id/welcome_text"
+        android:gravity="center"
+        android:textSize="15dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/welcome_text2"
+        android:layout_centerInParent="true"
+        android:textColor="@color/lightgray"
+        android:text="\nThe map above shows the evacuation centers\nin Baguio City with their details."
+        android:layout_below="@id/welcome_text1"
+        android:gravity="center"
+        android:textSize="15dp"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="70dp"
+        android:layout_alignParentBottom="true"
+        android:padding="8dp"
+        android:id="@+id/bottom_layout">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/message_edit_text"
+            android:layout_centerInParent="true"
+            android:hint="Message Here"
+            android:textColorHint="@color/gray"
+            android:textColor="@color/black"
+            android:padding="10dp"
+            android:textSize="15dp"
+            android:layout_toLeftOf="@id/send_btn"
+            android:background="@drawable/roundedchat_corner"/>
+
+        <ImageButton
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:id="@+id/send_btn"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/baseline_send_24"
+            />
+
+    </RelativeLayout>
+</RelativeLayout>

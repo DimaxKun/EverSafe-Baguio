@@ -55,4 +55,5 @@ dependencies {
     implementation (libs.navigation.fragment.ktx)
     implementation (libs.navigation.ui.ktx)
     implementation (libs.core.ktx)
+    implementation (libs.play.services.location)
 }
